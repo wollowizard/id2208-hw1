@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.transcriptSchema.net"
+           xmlns="http://www.transcriptSchema.net"
+           elementFormDefault="qualified">
+    
+    <xs:element name="transcript">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="ssn" type="xs:string"/>
+                <xs:element name="university" type="xs:string"/>
+                <xs:element name="degree" type="xs:string"/>
+                
+                <xs:element name="year">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:length value="4" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                
+                <xs:element name="courses" type="coursesList"/>
+                        
+            </xs:sequence>
+        
+        </xs:complexType>
+    </xs:element>
+        
+    <xs:complexType name="coursesList">
+        <xs:sequence>
+            <xs:element name="course" type="courseType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="courseType">
+        <xs:sequence>
+            <xs:element name="courseName" type="xs:string" minOccurs="1"/>
+            <xs:element name="courseCode" minOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[B-K]{2}\d{4}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="courseGrade" minOccurs="1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-F]{1}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>   
+        </xs:sequence>
+    </xs:complexType>
+        
+</xs:schema>
