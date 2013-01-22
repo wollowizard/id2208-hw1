@@ -7,8 +7,9 @@ and open the template in the editor.
 
 <transcript
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='transcriptSchema.xsd'
-    xsi:noNamespaceSchemaLocation='transcriptSchema.xsd'>
+    xmlns='http://www.transcriptSchema.net'
+    xsi:schemaLocation='http://www.transcriptSchema.net transcriptSchema.xsd'>
+    
     <name>Name</name>
     <ssn>123456789</ssn>
     <university></university>
@@ -17,8 +18,13 @@ and open the template in the editor.
     <courses>
         <course>
             <courseName>MMSE</courseName>
-            <courseCode>ID2203</courseCode>
+            <courseCode>ID2207</courseCode>
             <courseGrade>A</courseGrade>
+        </course>
+        <course>
+            <courseName>PWS</courseName>
+            <courseCode>ID2208</courseCode>
+            <courseGrade>B</courseGrade>
         </course>
     </courses>
 

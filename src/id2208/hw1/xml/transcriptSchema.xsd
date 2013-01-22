@@ -6,8 +6,10 @@ and open the template in the editor.
 
 <xs:schema version="1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns="http://www.transcrpitns.net"
+           targetNamespace="http://www.transcriptSchema.net"
+           xmlns="http://www.transcriptSchema.net"
            elementFormDefault="qualified">
+    
     <xs:element name="transcript">
         <xs:complexType>
             <xs:sequence>
@@ -33,7 +35,7 @@ and open the template in the editor.
         
     <xs:complexType name="coursesList">
         <xs:sequence>
-            <xs:element name="course" type="courseType" minOccurs="1"/>
+            <xs:element name="course" type="courseType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
