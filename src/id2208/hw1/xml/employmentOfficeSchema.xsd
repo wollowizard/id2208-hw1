@@ -5,64 +5,64 @@ and open the template in the editor.
 -->
 
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
            targetNamespace="http://www.employmentSchema.com"
            xmlns="http://www.employmentSchema.com"
            elementFormDefault="qualified">
         
-    <xs:element name="employments" type="employmentsType"/>
+    <xsd:element name="employments" type="employmentsType"/>
 
-    <xs:complexType name="employmentsType">
-        <xs:sequence>
-            <xs:element name="person" type="personHistoryType" minOccurs="0" maxOccurs="unbounded" />
+    <xsd:complexType name="employmentsType">
+        <xsd:sequence>
+            <xsd:element name="person" type="personHistoryType" minOccurs="0" maxOccurs="unbounded" />
             
-        </xs:sequence>
-    </xs:complexType>
+        </xsd:sequence>
+    </xsd:complexType>
     
-    <xs:complexType name="personHistoryType">
-        <xs:sequence>
-            <xs:element name="ssn" minOccurs="1" maxOccurs="1">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="[0-9]{9}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
+    <xsd:complexType name="personHistoryType">
+        <xsd:sequence>
+            <xsd:element name="ssn" minOccurs="1" maxOccurs="1">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="[0-9]{9}"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
                                    
-                </xs:element>
-            <xs:element name="workExperiences" type="workExperiencesType" />
-        </xs:sequence>
-    </xs:complexType>
+                </xsd:element>
+            <xsd:element name="workExperiences" type="workExperiencesType" />
+        </xsd:sequence>
+    </xsd:complexType>
     
-    <xs:complexType name="workExperiencesType">
-        <xs:sequence>
-            <xs:element name="workExperience" type="workExperienceType"  minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xsd:complexType name="workExperiencesType">
+        <xsd:sequence>
+            <xsd:element name="workExperience" type="workExperienceType"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
         
   
-    <xs:complexType name="workExperienceType">
-        <xs:sequence>
-            <xs:element name="companyCode" type="companyCodeType"/>
-            <xs:element name="companyName" type="companyNameType"/>
-            <xs:element name="fromDate"  type="xs:date"/>
-            <xs:element name="upToDate"  type="xs:date"/>
+    <xsd:complexType name="workExperienceType">
+        <xsd:sequence>
+            <xsd:element name="companyCode" type="companyCodeType"/>
+            <xsd:element name="companyName" type="companyNameType"/>
+            <xsd:element name="fromDate"  type="xsd:date"/>
+            <xsd:element name="upToDate"  type="xsd:date"/>
             
-        </xs:sequence>        
-    </xs:complexType>
+        </xsd:sequence>        
+    </xsd:complexType>
     
-    <xs:simpleType name="companyCodeType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9]{5}" />
-        </xs:restriction>
-    </xs:simpleType>
+    <xsd:simpleType name="companyCodeType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{5}" />
+        </xsd:restriction>
+    </xsd:simpleType>
     
     
-    <xs:simpleType name="companyNameType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Za-z]+"/>
-        </xs:restriction>
-    </xs:simpleType>
+    <xsd:simpleType name="companyNameType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Za-z]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
     
     
 
-</xs:schema>
+</xsd:schema>

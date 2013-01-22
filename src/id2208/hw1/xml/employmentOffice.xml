@@ -14,15 +14,15 @@ and open the template in the editor.
         
         <workExperiences>
             <workExperience>
-                <companyCode>12345</companyCode>
-                <companyName>KTH</companyName>
+                <companyCode>12346</companyCode>
+                <companyName>SU</companyName>
                 <fromDate>2006-09-25</fromDate>
                 <upToDate>2007-09-25</upToDate>
             </workExperience>
             
             <workExperience>
-                <companyCode>54321</companyCode>
-                <companyName>Ericsson</companyName>
+                <companyCode>59585</companyCode>
+                <companyName>Microsoft</companyName>
                 <fromDate>2008-09-25</fromDate>
                 <upToDate>2009-09-25</upToDate>
             </workExperience>
