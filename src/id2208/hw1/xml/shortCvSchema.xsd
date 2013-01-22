@@ -7,14 +7,21 @@ and open the template in the editor.
 <xs:schema version="1.0"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
-           xmlns="http://www.ournamespace.net">
+           xmlns="http://www.shortcvns.net">
     
     <xs:element name="person">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="firstname" type="xs:string"/>
                 <xs:element name="lastname" type="xs:string"/>
-                <xs:element name="ssn" type="xs:string"/>                
+                <xs:element name="ssn">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{9}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                                   
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
