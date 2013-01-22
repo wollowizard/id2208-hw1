@@ -17,15 +17,21 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 public class SAXDemo extends DefaultHandler {
 
+    @Override
     public void startDocument() {
         System.out.println("***Start of Document***");
     }
 
+    @Override
     public void endDocument() {
         System.out.println("***End of Document***");
     }
 
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
+        if (qName.equalsIgnoreCase("FIRSTNAME")) {
+            bfname = true;
+        }
+
         System.out.print("<" + qName);
         int n = attributes.getLength();
         for (int i = 0; i < n; i += 1) {
@@ -45,12 +51,12 @@ public class SAXDemo extends DefaultHandler {
 
     public static void main(String args[]) throws Exception {
         /*if (args.length != 1) {
-            System.err.println("Usage: java SAXDemo <xml-file>");
-            System.exit(1);
-        }*/
+         System.err.println("Usage: java SAXDemo <xml-file>");
+         System.exit(1);
+         }*/
         SAXDemo handler = new SAXDemo();
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
-        parser.parse(new File("src/id2208/hw1/xml/employmentOffice.xml"), handler);
+        parser.parse(new File("src/id2208/hw1/xml/shortCv.xml"), handler);
     }
 }
