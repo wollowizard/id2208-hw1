@@ -8,14 +8,8 @@ and open the template in the editor.
 <person
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='shortCvSchema.xsd'>
-    <firstname>
-        Name
-    </firstname>
-    <lastname>
-        Surname
-    </lastname>
-    <ssn>
-        1234567890
-    </ssn>
+    <firstname>Name</firstname>
+    <lastname>Surname</lastname>
+    <ssn>123456789</ssn>
     
 </person>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<workExperiences
+    xmlns="http://www.employmentSchema.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.employmentSchema.com employmentOfficeSchema.xsd">
+    <workExperience>
+        <companyCode>54321</companyCode>
+        <companyName>Ericsson</companyName>
+        <fromDate>2006-09-25</fromDate>
+        <upToDate>2009-09-24</upToDate>
+    </workExperience>
+
+</workExperiences>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                      targetNamespace="http://www.employmentSchema.com"
+                      xmlns="http://www.employmentSchema.com"
+                      elementFormDefault="qualified">
+    
+    
+    <xs:element name="workExperiences" type="workExperiencesType"/>
+
+
+    <xs:complexType name="workExperiencesType">
+        <xs:sequence>
+            <xs:element name="workExperience" type="workExperienceType" minOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+        
+    <xs:complexType name="workExperienceType">
+        <xs:sequence>
+            <xs:element name="companyCode" type="companyCodeType"/>
+            <xs:element name="companyName" type="companyNameType"/>
+            <xs:element name="fromDate"  type="xs:date"/>
+            <xs:element name="upToDate"  type="xs:date"/>
+            
+        </xs:sequence>        
+    </xs:complexType>
+    
+    <xs:simpleType name="companyCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:simpleType name="companyNameType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+
+</xs:schema>
