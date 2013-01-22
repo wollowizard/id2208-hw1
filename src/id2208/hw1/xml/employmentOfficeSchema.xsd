@@ -6,20 +6,40 @@ and open the template in the editor.
 
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                      targetNamespace="http://www.employmentSchema.com"
-                      xmlns="http://www.employmentSchema.com"
-                      elementFormDefault="qualified">
-    
-    
-    <xs:element name="workExperiences" type="workExperiencesType"/>
+           targetNamespace="http://www.employmentSchema.com"
+           xmlns="http://www.employmentSchema.com"
+           elementFormDefault="qualified">
+        
+    <xs:element name="employments" type="employmentsType"/>
 
-
+    <xs:complexType name="employmentsType">
+        <xs:sequence>
+            <xs:element name="person" type="personHistoryType" minOccurs="0" maxOccurs="unbounded" />
+            
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="personHistoryType">
+        <xs:sequence>
+            <xs:element name="ssn" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{9}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                                   
+                </xs:element>
+            <xs:element name="workExperiences" type="workExperiencesType" />
+        </xs:sequence>
+    </xs:complexType>
+    
     <xs:complexType name="workExperiencesType">
         <xs:sequence>
-            <xs:element name="workExperience" type="workExperienceType" minOccurs="1" />
+            <xs:element name="workExperience" type="workExperienceType"  minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
         
+  
     <xs:complexType name="workExperienceType">
         <xs:sequence>
             <xs:element name="companyCode" type="companyCodeType"/>
