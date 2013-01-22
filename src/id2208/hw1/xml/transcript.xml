@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<transcript
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='transcriptSchema.xsd'
+    xsi:noNamespaceSchemaLocation='transcriptSchema.xsd'>
+    <name>Name</name>
+    <ssn>123456789</ssn>
+    <university></university>
+    <degree>Distributed Systems</degree>
+    <year>2011</year>
+    <courses>
+        <course>
+            <courseName>MMSE</courseName>
+            <courseCode>ID2203</courseCode>
+            <courseGrade>A</courseGrade>
+        </course>
+    </courses>
+
+</transcript>
