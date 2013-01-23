@@ -10,34 +10,38 @@ and open the template in the editor.
            xmlns="http://www.transcriptSchema.net"
            elementFormDefault="qualified">
     
-    <xs:element name="transcript">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="ssn" type="xs:string"/>
-                <xs:element name="university" type="xs:string"/>
-                <xs:element name="degree" type="xs:string"/>
-                
-                <xs:element name="year">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:length value="4" />
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                
-                <xs:element name="courses" type="coursesList"/>
-                        
-            </xs:sequence>
+    <xs:element name="transcriptList" type="transcriptListType" />
         
-        </xs:complexType>
-    </xs:element>
+    <xs:complexType name="transcriptListType">
+        <xs:sequence>
+            <xs:element name="studentTranscript" type="studentTranscriptType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
         
+    <xs:complexType name="studentTranscriptType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="ssn" type="xs:string"/>
+            <xs:element name="university" type="xs:string"/>
+            <xs:element name="degree" type="xs:string"/>
+            <xs:element name="year">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="4" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="courses" type="coursesList"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
     <xs:complexType name="coursesList">
         <xs:sequence>
             <xs:element name="course" type="courseType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
+
 
     <xs:complexType name="courseType">
         <xs:sequence>

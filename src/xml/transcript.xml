@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:transcriptList
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://www.transcriptSchema.net'
+    xsi:schemaLocation='http://www.transcriptSchema.net transcriptSchema.xsd'>
+    <ns1:studentTranscript>
+        <ns1:name>Gerard Marin</ns1:name>
+        <ns1:ssn>123456788</ns1:ssn>
+        <ns1:university>KTH</ns1:university>
+        <ns1:degree>Software Engineering of Distributed Systems</ns1:degree>
+        <ns1:year>2012</ns1:year>
+        <ns1:courses>
+            <ns1:course>
+                <ns1:courseName>MMSE</ns1:courseName>
+                <ns1:courseCode>ID2207</ns1:courseCode>
+                <ns1:courseGrade>B</ns1:courseGrade>
+            </ns1:course>
+            <ns1:course>
+                <ns1:courseName>Distributed Systems Basic</ns1:courseName>
+                <ns1:courseCode>ID2201</ns1:courseCode>
+                <ns1:courseGrade>A</ns1:courseGrade>
+            </ns1:course>
+            <ns1:course>
+                <ns1:courseName>Distributed Systems Advanced</ns1:courseName>
+                <ns1:courseCode>ID2203</ns1:courseCode>
+                <ns1:courseGrade>C</ns1:courseGrade>
+            </ns1:course>
+            <ns1:course>
+                <ns1:courseName>DAIIA</ns1:courseName>
+                <ns1:courseCode>ID2209</ns1:courseCode>
+                <ns1:courseGrade>A</ns1:courseGrade>
+            </ns1:course>
+        </ns1:courses>
+    </ns1:studentTranscript>
+    <ns1:studentTranscript>
+        <ns1:name>Alfredo Scaccialepre</ns1:name>
+        <ns1:ssn>123456789</ns1:ssn>
+        <ns1:university>KTH</ns1:university>
+        <ns1:degree>Double Degree Program</ns1:degree>
+        <ns1:year>2012</ns1:year>
+        <ns1:courses>
+            <ns1:course>
+                <ns1:courseName>MMSE</ns1:courseName>
+                <ns1:courseCode>ID2207</ns1:courseCode>
+                <ns1:courseGrade>A</ns1:courseGrade>
+            </ns1:course>
+            <ns1:course>
+                <ns1:courseName>PWS</ns1:courseName>
+                <ns1:courseCode>ID2208</ns1:courseCode>
+                <ns1:courseGrade>A</ns1:courseGrade>
+            </ns1:course>
+            <ns1:course>
+                <ns1:courseName>Emeded Systems</ns1:courseName>
+                <ns1:courseCode>ID2211</ns1:courseCode>
+                <ns1:courseGrade>E</ns1:courseGrade>
+            </ns1:course>
+            <ns1:course>
+                <ns1:courseName>DAIIA</ns1:courseName>
+                <ns1:courseCode>ID2209</ns1:courseCode>
+                <ns1:courseGrade>B</ns1:courseGrade>
+            </ns1:course>
+        </ns1:courses>
+    </ns1:studentTranscript>
+
+</ns1:transcriptList>
