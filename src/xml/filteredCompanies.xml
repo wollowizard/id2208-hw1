@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:local xmlns="http://www.companyInfoSchema.net" xmlns:ns2="uri">
+    <companyInfo>
+        <companyCode>12345</companyCode>
+        <companyName>KTH</companyName>
+        <telefonNumber>4687906000</telefonNumber>
+    </companyInfo>
+    <companyInfo>
+        <companyCode>54321</companyCode>
+        <companyName>Ericsson</companyName>
+        <telefonNumber>4610719000</telefonNumber>
+    </companyInfo>
+</ns2:local>

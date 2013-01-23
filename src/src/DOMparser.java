@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package id2208.hw1.src;
+package src;
 
 import java.io.File;
 import java.io.IOException;
@@ -78,7 +78,7 @@ public class DOMparser {
         //Parse the XML input file to create a document object that represents the input XML file 
         Document document = null;
         try {      
-            document = builder.parse(new File("src/id2208/hw1/xml/employmentOffice.xml"));
+            document = builder.parse(new File("src/xml/employmentOffice.xml"));
         } catch (SAXException | IOException ex) {
             Logger.getLogger(DOMparser.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -164,7 +164,7 @@ public class DOMparser {
         //generate DOM tree source from the output document
         DOMSource source = new DOMSource(output);
         //get stream to fill the output file
-        StreamResult result = new StreamResult(new File("src/id2208/hw1/xml/employmentOutput.xml"));
+        StreamResult result = new StreamResult(new File("src/xml/employmentOutput.xml"));
         //fill the XML output file using the stream with the DOM tree
         try {
             transformer.transform(source, result);
