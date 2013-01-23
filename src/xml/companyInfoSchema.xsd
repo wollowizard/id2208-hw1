@@ -12,13 +12,14 @@ and open the template in the editor.
     <xs:element name="companyInfo" type="listCompaniesType"/>
     <xs:complexType name="listCompaniesType">
         <xs:sequence>
-            <xs:element name="companyInfo" type="companyInfoType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="companyInfo" type="companyInfoType" minOccurs="1" maxOccurs="unbounded">
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="companyInfoType">
+    <xs:complexType name="companyInfoType" >
         <xs:sequence>
-           <xs:element name="companyCode" type="companyCodeType" minOccurs="1" maxOccurs="1"/>
+           <xs:element name="companyCode" type="companyCodeType"/>
            <xs:element name="companyName" type="companyNameType" minOccurs="1" maxOccurs="1"/>
            <xs:element name="telefonNumber" type="telefonNumberType" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>

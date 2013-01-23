@@ -37,13 +37,13 @@ public class SAXparser extends DefaultHandler {
     public void startElement(String uri, String localName, String qName,
             Attributes attributes) throws SAXException {
 
-        if (qName.equalsIgnoreCase("ssn")) {
+        if (qName.equalsIgnoreCase("cv:ssn")) {
             isSsn = true;
         }
-        if (qName.equalsIgnoreCase("firstname")) {
+        if (qName.equalsIgnoreCase("cv:firstname")) {
             isFname = true;
         }
-        if (qName.equalsIgnoreCase("lastname")) {
+        if (qName.equalsIgnoreCase("cv:lastname")) {
             isLname = true;
         }
     }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applicantProfile xmlns="http://www.applicantProfile.com">
+    <personalInformation>
+        <firstname>Alfredo</firstname>
+        <lastname>Scaccialepre</lastname>
+        <ssn>123456789</ssn>
+    </personalInformation>
+    <studiesInformation>
+        <university>KTH</university>
+        <degree>Double Degree Program</degree>
+        <year>2012</year>
+        <GPA>8.75</GPA>
+    </studiesInformation>
+    <workExperiences>
+        <workExperience>
+            <companyCode>22222</companyCode>
+            <companyName>SU</companyName>
+            <fromDate>2006-09-25</fromDate>
+            <upToDate>2007-09-25</upToDate>
+            <information>
+                <telefonNumber>4610719001</telefonNumber>
+            </information>
+        </workExperience>
+        <workExperience>
+            <companyCode>11111</companyCode>
+            <companyName>Microsoft</companyName>
+            <fromDate>2008-09-25</fromDate>
+            <upToDate>2009-09-25</upToDate>
+            <information>
+                <telefonNumber>4610719002</telefonNumber>
+            </information>
+        </workExperience>
+    </workExperiences>
+</applicantProfile>

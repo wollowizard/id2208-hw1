@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.applicantProfile.com">
+    <xs:element name="applicantProfile">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personalInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="firstname"/>
+                            <xs:element type="xs:string" name="lastname"/>
+                            <xs:element type="xs:int" name="ssn"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="studiesInformation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="university"/>
+                            <xs:element type="xs:string" name="degree"/>
+                            <xs:element type="xs:short" name="year"/>
+                            <xs:element type="xs:float" name="GPA"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="workExperiences">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="workExperience" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:short" name="companyCode"/>
+                                        <xs:element type="xs:string" name="companyName"/>
+                                        <xs:element type="xs:date" name="fromDate"/>
+                                        <xs:element type="xs:date" name="upToDate"/>
+                                        <xs:element name="information">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:long" name="telefonNumber"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
