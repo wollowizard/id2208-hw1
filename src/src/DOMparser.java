@@ -30,7 +30,7 @@ import org.xml.sax.SAXException;
  */
 public class DOMparser {
     
-    public ArrayList<String> doIt(String ssnParam){
+    public ArrayList<String> giveCompaniesCodes(String ssnParam){
         ArrayList<String> codes=new ArrayList<String>();
         
         //set SSN field 

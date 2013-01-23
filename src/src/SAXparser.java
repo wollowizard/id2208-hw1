@@ -4,7 +4,6 @@
  */
 package src;
 
-import com.sun.org.apache.bcel.internal.generic.GETFIELD;
 import company.db.ListCompaniesType;
 import java.io.File;
 import java.util.ArrayList;
@@ -34,6 +33,7 @@ public class SAXparser extends DefaultHandler {
     private String fname;
     private String lname;
 
+    @Override
     public void startElement(String uri, String localName, String qName,
             Attributes attributes) throws SAXException {
 
@@ -48,10 +48,12 @@ public class SAXparser extends DefaultHandler {
         }
     }
 
+    @Override
     public void endElement(String uri, String localName,
             String qName) throws SAXException {
     }
 
+    @Override
     public void characters(char ch[], int start, int length) throws SAXException {
 
         if (isSsn) {
@@ -73,12 +75,9 @@ public class SAXparser extends DefaultHandler {
     }
 
     public static void main(String args[]) throws Exception {
-        /*if (args.length != 1) {
-         System.err.println("Usage: java SAXparser <xml-file>");
-         System.exit(1);
-         }*/
+        
 
-
+        //The sax parser reads the shortCv and gets the ssn of the guy
         SAXparser handler = new SAXparser();
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
@@ -86,28 +85,36 @@ public class SAXparser extends DefaultHandler {
         ShortCvInfo info = handler.getShortCvInfo();
         System.out.println("Starting computation for " + info.getFname() + " " + info.getLname() + " " + info.getSsn());
 
-        //
+        // The dom parser analyzes  the employment office to return all the codes of the 
+        //companies where the guy has worked
         DOMparser domp = new DOMparser();
-        ArrayList<String> codes = domp.doIt(info.getSsn());
+        ArrayList<String> codes = domp.giveCompaniesCodes(info.getSsn());
 
 
-        //
+        // The jaxb parser analyzes  the company info to write as output all the info
+        //about the companies where the guy has worked
         JAXBCompanyInfoExtractor ie = new JAXBCompanyInfoExtractor("src/xml/companyInfo.xml", codes);
         ie.importXml();
         ListCompaniesType lc = ie.filter();
         ie.exportXml(lc, "src/xml/companyInfoOutput.xml");
 
-        //xlst to get avg of transcripts
+        //xlst reads the transcript to calculate the avg of the guy's grades
         Source xmlInput = new StreamSource(new File("src/xml/transcript.xml"));
         Source xsl = new StreamSource(new File("src/xml/transcriptTransformer.xsl"));
         Result xmlOutput = new StreamResult(new File("src/xml/transcriptOutput.xml"));
-        
+
         Transformer transformer = TransformerFactory.newInstance().newTransformer(xsl);
         transformer.transform(xmlInput, xmlOutput);
-        
-        
+
+
+
+
         ////xlst to merge everything
 
+        xsl = new StreamSource(new File("src/xml/XSLTmerger.xsl"));
+        xmlOutput = new StreamResult(new File("src/xml/finalOutput.xml"));
+        transformer = TransformerFactory.newInstance().newTransformer(xsl);
+        transformer.transform(xmlInput, xmlOutput);
 
 
 
