@@ -57,7 +57,7 @@ public class JAXBCompanyInfoExtractor {
         File file=new File(targetPath);
         Marshaller marshaller = jc.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        marshaller.marshal(new JAXBElement<ListCompaniesType>(new QName("uri", "local"), ListCompaniesType.class, lc), file);
+        marshaller.marshal(new JAXBElement<ListCompaniesType>(new QName("local"), ListCompaniesType.class, lc), file);
         
 
     }

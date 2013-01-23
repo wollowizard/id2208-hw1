@@ -42,13 +42,7 @@
             <xsl:variable name="numberOfExams" select="count(ns1:studentTranscript[ns1:ssn='123456789']/ns1:courses/ns1:course/ns1:courseGrade)" />
             
             <xsl:variable name="gpa" select="$thesum div $numberOfExams" />    
-             
-            <xsl:element name="summmm"> 
-                <xsl:value-of select="$thesum"/>
-            </xsl:element>
-            <xsl:element name="nofexams"> 
-                <xsl:value-of select="$numberOfExams"/>
-            </xsl:element>   
+    
             <xsl:element name="GPA"> 
                 <xsl:value-of select="$gpa"/>
             </xsl:element>

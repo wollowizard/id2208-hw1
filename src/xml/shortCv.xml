@@ -5,11 +5,12 @@ and open the template in the editor.
 -->
 
 
-<person
+<cv:person
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:noNamespaceSchemaLocation='shortCvSchema.xsd'>
-    <firstname>Alfredo</firstname>
-    <lastname>Scaccialepre</lastname>
-    <ssn>123456789</ssn>
+    xmlns:cv='http://www.shortcvns.net'
+    xsi:schemaLocation='http://www.shortcvns.net shortCvSchema.xsd'>
+    <cv:firstname>Alfredo</cv:firstname>
+    <cv:lastname>Scaccialepre</cv:lastname>
+    <cv:ssn>123456789</cv:ssn>
     
-</person>
+</cv:person>
