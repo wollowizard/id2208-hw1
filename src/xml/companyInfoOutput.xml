@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:local xmlns="http://www.companyInfoSchema.net" xmlns:ns2="uri">
+    <companyInfo>
+        <companyCode>22222</companyCode>
+        <companyName>SU</companyName>
+        <telefonNumber>4610719001</telefonNumber>
+    </companyInfo>
+    <companyInfo>
+        <companyCode>11111</companyCode>
+        <companyName>Microsoft</companyName>
+        <telefonNumber>4610719002</telefonNumber>
+    </companyInfo>
+</ns2:local>

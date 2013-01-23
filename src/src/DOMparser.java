@@ -6,6 +6,7 @@ package src;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
@@ -29,13 +30,14 @@ import org.xml.sax.SAXException;
  */
 public class DOMparser {
     
-    public static void main(String args[]){
+    public ArrayList<String> doIt(String ssnParam){
+        ArrayList<String> codes=new ArrayList<String>();
         
         //set SSN field 
-        String myssn = "123456789";
-        if(args.length > 0){
-            myssn = args[0];
-        }
+        String myssn = ssnParam;
+        //if(args.length > 0){
+          //  myssn = args[0];
+        //}
         
         //Get a factory object for DocumentBuilder objects 
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -127,6 +129,10 @@ public class DOMparser {
                         weElement.appendChild(companyCodeElement);
                         System.out.println("Company code : " + companyCode);
                         
+                        
+                        //add code of the current company!!!!!!!!!
+                        codes.add(companyCode);
+                        
                         //companyName element
                         String companyName = we.getElementsByTagName("companyName").item(0).getTextContent();
 			Element companyNameElement = output.createElement("companyName");
@@ -171,6 +177,7 @@ public class DOMparser {
         } catch (TransformerException ex) {
             Logger.getLogger(DOMparser.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return codes;
     }
  
     

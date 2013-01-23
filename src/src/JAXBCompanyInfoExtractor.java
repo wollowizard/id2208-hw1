@@ -64,8 +64,8 @@ public class JAXBCompanyInfoExtractor {
 
     public static void main(String args[]) {
         ArrayList<String> codes = new ArrayList<>();
-        codes.add("12345");
         codes.add("54321");
+        
         try {
             JAXBCompanyInfoExtractor ie = new JAXBCompanyInfoExtractor("src/xml/companyInfo.xml", codes);
             ie.importXml();

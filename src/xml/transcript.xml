@@ -19,22 +19,22 @@ and open the template in the editor.
             <ns1:course>
                 <ns1:courseName>MMSE</ns1:courseName>
                 <ns1:courseCode>ID2207</ns1:courseCode>
-                <ns1:courseGrade>B</ns1:courseGrade>
+                <ns1:courseGrade>9</ns1:courseGrade>
             </ns1:course>
             <ns1:course>
                 <ns1:courseName>Distributed Systems Basic</ns1:courseName>
                 <ns1:courseCode>ID2201</ns1:courseCode>
-                <ns1:courseGrade>A</ns1:courseGrade>
+                <ns1:courseGrade>10</ns1:courseGrade>
             </ns1:course>
             <ns1:course>
                 <ns1:courseName>Distributed Systems Advanced</ns1:courseName>
                 <ns1:courseCode>ID2203</ns1:courseCode>
-                <ns1:courseGrade>C</ns1:courseGrade>
+                <ns1:courseGrade>8</ns1:courseGrade>
             </ns1:course>
             <ns1:course>
                 <ns1:courseName>DAIIA</ns1:courseName>
                 <ns1:courseCode>ID2209</ns1:courseCode>
-                <ns1:courseGrade>A</ns1:courseGrade>
+                <ns1:courseGrade>10</ns1:courseGrade>
             </ns1:course>
         </ns1:courses>
     </ns1:studentTranscript>
@@ -48,22 +48,22 @@ and open the template in the editor.
             <ns1:course>
                 <ns1:courseName>MMSE</ns1:courseName>
                 <ns1:courseCode>ID2207</ns1:courseCode>
-                <ns1:courseGrade>A</ns1:courseGrade>
+                <ns1:courseGrade>10</ns1:courseGrade>
             </ns1:course>
             <ns1:course>
                 <ns1:courseName>PWS</ns1:courseName>
                 <ns1:courseCode>ID2208</ns1:courseCode>
-                <ns1:courseGrade>A</ns1:courseGrade>
+                <ns1:courseGrade>10</ns1:courseGrade>
             </ns1:course>
             <ns1:course>
                 <ns1:courseName>Emeded Systems</ns1:courseName>
                 <ns1:courseCode>ID2211</ns1:courseCode>
-                <ns1:courseGrade>E</ns1:courseGrade>
+                <ns1:courseGrade>6</ns1:courseGrade>
             </ns1:course>
             <ns1:course>
                 <ns1:courseName>DAIIA</ns1:courseName>
                 <ns1:courseCode>ID2209</ns1:courseCode>
-                <ns1:courseGrade>B</ns1:courseGrade>
+                <ns1:courseGrade>9</ns1:courseGrade>
             </ns1:course>
         </ns1:courses>
     </ns1:studentTranscript>

@@ -20,5 +20,19 @@ and open the template in the editor.
         <ns1:companyName>Ericsson</ns1:companyName>
         <ns1:telefonNumber>4610719000</ns1:telefonNumber>
     </ns1:companyInfo>
-
+    
+    <ns1:companyInfo>
+        <ns1:companyCode>22222</ns1:companyCode>
+        <ns1:companyName>SU</ns1:companyName>
+        <ns1:telefonNumber>4610719001</ns1:telefonNumber>
+    </ns1:companyInfo>
+    
+    <ns1:companyInfo>
+    
+        <ns1:companyCode>11111</ns1:companyCode>
+        <ns1:companyName>Microsoft</ns1:companyName>
+        <ns1:telefonNumber>4610719002</ns1:telefonNumber>
+    </ns1:companyInfo>
 </ns1:companyInfo>
+    
+    
